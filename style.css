@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #aadeff;
+}
+.container{
+    width: min(100%, 800px);
+    padding: 20px;
+}
+h1, h2, h3, img, p, select{
+    margin-bottom: 10px;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+#country-info{
+    overflow-x: auto;
+    & img{
+        max-width: 100%;
+    }
+    & table{
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
+        & td{
+            padding: 5px;
+            border-color: #000;
+        }
+    }
+    & #coat-of-arms{
+        width: min(100%, 320px);
+        background-color: #fff;
+    }
+}
