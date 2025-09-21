@@ -27,6 +27,9 @@ async function fetchCountryInfo(){
         if(countryName == "china" || countryName == "mali"){
             country = data[1]; // Handle special cases for China and Mali
         }
+        else if(countryName == "guinea"){
+            country = data[2]; // Handle special cases for Guinea
+        }
         let infoDiv = document.getElementById('country-info'),
         currencies = country.currencies ? Object.values(country.currencies).map((currency) => currency.name + ' (' + currency.symbol + ')').join(', ') : 'N/A',
         languages = country.languages ? Object.values(country.languages).join(', ') : 'N/A';
