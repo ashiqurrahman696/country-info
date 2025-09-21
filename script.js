@@ -27,9 +27,6 @@ async function fetchCountryInfo(){
         if(countryName == "china" || countryName == "mali" || countryName == "ireland"){
             country = data[1]; // Handle special cases for China, Mali and Ireland
         }
-        if(countryName == "united states"){
-            country = data[2]; // Handle special cases for United States
-        }
         let infoDiv = document.getElementById('country-info'),
         currencies = country.currencies ? Object.values(country.currencies).map((currency) => currency.name + ' (' + currency.symbol + ')').join(', ') : 'N/A',
         languages = country.languages ? Object.values(country.languages).join(', ') : 'N/A';
