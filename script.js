@@ -24,8 +24,8 @@ async function fetchCountryInfo(){
         let response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`),
         data = await response.json(),
         country = data[0];
-        if(countryName == "china" || countryName == "mali" || countryName == "ireland"){
-            country = data[1]; // Handle special cases for China, Mali and Ireland
+        if(countryName == "china" || countryName == "mali"){
+            country = data[1]; // Handle special cases for China and Mali
         }
         let infoDiv = document.getElementById('country-info'),
         currencies = country.currencies ? Object.values(country.currencies).map((currency) => currency.name + ' (' + currency.symbol + ')').join(', ') : 'N/A',
