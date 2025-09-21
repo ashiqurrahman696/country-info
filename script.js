@@ -24,8 +24,8 @@ async function fetchCountryInfo(){
         let response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`),
         data = await response.json(),
         country = data[0];
-        if(countryName == "china" || countryName == "mali" || countryName == "ireland" || countryName == "netherlands"){
-            country = data[1]; // Handle special cases for China, Mali, Ireland and Netherlands
+        if(countryName == "china" || countryName == "mali" || countryName == "ireland"){
+            country = data[1]; // Handle special cases for China, Mali and Ireland
         }
         if(countryName == "united states"){
             country = data[2]; // Handle special cases for United States
